@@ -1,0 +1,29 @@
+{
+  "name": "borschphp/borsch-chef",
+  "description": "Because you need a good chef to cook a good borsch.",
+  "homepage": "http://github.com/borschphp/borsck-chef",
+  "license": "MIT",
+  "keywords": [
+    "borsch",
+    "framework",
+    "cli"
+  ],
+  "authors": [
+    {
+      "name": "Alexandre DEBUSSCHERE",
+      "email": "alexandre.debusschere@hey.com"
+    }
+  ],
+  "require": {
+    "php": "^7.2|^8.0",
+    "league/climate": "^3.8"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8"
+  },
+  "autoload": {
+    "psr-4": {
+      "Borsch\\": "src/"
+    }
+  }
+}
