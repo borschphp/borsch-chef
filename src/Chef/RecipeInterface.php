@@ -39,7 +39,7 @@ interface RecipeInterface
      *
      * @return mixed
      */
-    public function getDefaultValue();
+    public function getDefaultValue(): mixed;
 
     /**
      * Whether the argument is required.

@@ -5,9 +5,7 @@
 
 namespace Borsch\Chef;
 
-use Borsch\Chef\Recipe\Handler;
-use Borsch\Chef\Recipe\Help;
-use Borsch\Chef\Recipe\Middleware;
+use Borsch\Chef\Recipe\{Handler, Help, Middleware};
 use InvalidArgumentException;
 use League\CLImate\CLImate;
 
@@ -19,10 +17,10 @@ class Chef
 {
 
     /** @var CLImate */
-    private $cli;
+    private CLImate $cli;
 
     /** @var RecipeInterface[] */
-    private $recipes;
+    private array $recipes;
 
     /**
      * Chef Constructor

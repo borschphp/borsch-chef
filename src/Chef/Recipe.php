@@ -14,10 +14,10 @@ class Recipe implements RecipeInterface
 {
 
     /** @var string */
-    protected $success_message = '';
+    protected string $success_message = '';
 
     /** @var string */
-    protected $error_message = 'An error occurred.';
+    protected string $error_message = 'An error occurred.';
 
     /**
      * @inheritDoc
@@ -46,7 +46,7 @@ class Recipe implements RecipeInterface
     /**
      * @inheritDoc
      */
-    public function getDefaultValue()
+    public function getDefaultValue(): mixed
     {
         return null;
     }

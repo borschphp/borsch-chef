@@ -5,8 +5,7 @@
 
 namespace Borsch\Chef\Recipe;
 
-use Borsch\Chef\FileCreatorTrait;
-use Borsch\Chef\Recipe;
+use Borsch\Chef\{FileCreatorTrait, Recipe};
 use League\CLImate\CLImate;
 
 /**
