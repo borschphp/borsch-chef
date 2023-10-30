@@ -54,7 +54,7 @@ trait FileCreatorTrait
             return false;
         }
 
-        $this->success_message = sprintf('Handler "%s" created.', $name);
+        $this->success_message = sprintf('File "%s" created.', $filename);
 
         return true;
     }
