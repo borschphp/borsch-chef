@@ -5,7 +5,7 @@
 
 namespace Borsch\Chef;
 
-use Borsch\Chef\Recipe\{Handler, Help, Middleware};
+use Borsch\Chef\Recipe\{CacheTable, Environment, Handler, Help, Middleware};
 use InvalidArgumentException;
 use League\CLImate\CLImate;
 
@@ -31,7 +31,7 @@ class Chef
         $this->cli->description('A good chef for a good borsch, your personal CLI.');
 
         $this->setDefaultRecipes();
-        $this->addRecipes($this->recipes);
+        $this->loadRecipes($this->recipes);
 
         $this->cli->arguments->parse();
     }
@@ -44,7 +44,8 @@ class Chef
         $this->recipes = [
             'help' => new Help(),
             'handler' => new Handler(),
-            'middleware' => new Middleware()
+            'middleware' => new Middleware(),
+            'environment' => new Environment()
         ];
     }
 
@@ -53,7 +54,7 @@ class Chef
      * @return void
      * @throws InvalidArgumentException
      */
-    private function addRecipes(array $recipes): void
+    private function loadRecipes(array $recipes): void
     {
         foreach ($recipes as $name => $recipe) {
             if (!$recipe instanceof RecipeInterface) {
